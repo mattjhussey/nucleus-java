@@ -5,7 +5,8 @@ import hussey.matt.Main;
 public class MainTest {
     @Test
     public void aTest() {
-	Main.main(null);
+	String[] strings = new String[] {"one", "two", "three"};
+	Main.main(strings);
 	assertTrue(true);
     }
 }
