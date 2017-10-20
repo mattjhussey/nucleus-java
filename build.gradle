@@ -38,6 +38,10 @@ dependencies {
   testCompile 'junit:junit:4.12'
 }
 
+task javadocs(type: Javadoc) {
+  source = sourceSets.main.allJava
+}
+
 tasks.withType(com.github.spotbugs.SpotBugsTask) {
   reports {
     xml.enabled = false
