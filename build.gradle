@@ -10,14 +10,17 @@ plugins {
   id "application"
   id "checkstyle"
   id "com.github.spotbugs" version "1.5"
-  id "java"
 }
+
+project.sourceCompatibility = "1.8"
+project.targetCompatibility = "1.8"
 
 checkstyle {
   toolVersion = "8.3"
 }
 
 mainClassName = 'hussey.matt.Main'
+version = '1.0.0.0'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -54,4 +57,9 @@ tasks.withType(Checkstyle) {
     xml.enabled false
     html.enabled true
   }
+}
+
+wrapper {
+  gradleVersion = '4.2.1'
+  distributionType = Wrapper.DistributionType.ALL
 }
