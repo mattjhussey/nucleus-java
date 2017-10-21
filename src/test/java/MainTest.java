@@ -1,13 +1,14 @@
 import static org.junit.Assert.assertTrue;
-import org.junit.Test;
+
 import hussey.matt.Main;
+import org.junit.Test;
 
 public class MainTest {
-    @Test
-    public void aTest() {
-	String[] strings = new String[] {"one", "two", "three"};
-	Main m = new Main();
-	m.main(strings);
-	assertTrue(true);
-    }
+  @Test
+  public void thisIsATest() {
+    String[] strings = new String[] {"one", "two", "three"};
+    Main m = new Main();
+    m.main(strings);
+    assertTrue(true);
+  }
 }
