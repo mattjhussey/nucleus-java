@@ -12,11 +12,17 @@ plugins {
   id "com.github.spotbugs" version "1.5"
 }
 
+apply plugin: "jacoco"
+
 project.sourceCompatibility = "1.8"
 project.targetCompatibility = "1.8"
 
 checkstyle {
   toolVersion = "8.3"
+}
+
+jacoco {
+    toolVersion = "0.7.8"
 }
 
 mainClassName = 'hussey.matt.Main'
@@ -57,6 +63,24 @@ tasks.withType(Checkstyle) {
     xml.enabled false
     html.enabled true
   }
+}
+
+jacocoTestReport {
+  reports {
+    xml.enabled false
+    csv.enabled false
+    html.enabled true
+  }
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = 1.0
+            }
+        }
+    }
 }
 
 wrapper {

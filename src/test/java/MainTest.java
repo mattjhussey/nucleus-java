@@ -6,7 +6,8 @@ public class MainTest {
     @Test
     public void aTest() {
 	String[] strings = new String[] {"one", "two", "three"};
-	Main.main(strings);
+	Main m = new Main();
+	m.main(strings);
 	assertTrue(true);
     }
 }
